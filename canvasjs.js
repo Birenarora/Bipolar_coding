@@ -87,7 +87,7 @@ function restore() {
 img.src = _canvas1;
 }
 
-document.getElementById('inp').onchange = function(e) {
+document.getElementById('inp1').onchange = function(e) {
   var img = new Image();
   img.onload = draw1;
   img.onerror = failed;
@@ -101,6 +101,17 @@ function draw1() {
 function failed() {
   console.error("The provided file couldn't be loaded as an Image media");
 }
+
+$('#inp').on('click', function(){
+        img = new Image();
+    
+    img.onload = function(){
+        draw.drawImage(img, 0, 0, canvas1.width, canvas1.height);
+        $("span").text("Loaded.");
+    };
+    img.src = "1.jpg";
+    $("span").text("Loading...");
+});
 
 // MAKE 2 GRIDS -   
 //ONE WITH DEFAULT IMAGE ON BACKGROUND & DO FUNCTIONS ON IT - CLEAR,RESTORE,DOWNLOAD
