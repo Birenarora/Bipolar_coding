@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bipolar Factory Assessment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        canvas {
+            cursor: crosshair;
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="row">
+                    <center>
+                        <h1>User loading image & drawing on it!</h1>
+                        <canvas width="400" height="400" id="drawing"></canvas>
+                    </center>
+                </div>
+                <div class="row">
+                    <center>
+                        <input type="button" id="clear" value="Clear Image">
+                        <!-- <input type="button" id="download" value="Save"> -->
+                        <a id="download" download="image.png"><button type="button" onClick="download()">Download</button></a>
+                        <input type="button" onclick="restore()" value="Restore">
+                        <input type="file" id="inp" accept="image/*" value="Load Image">
+                    </center>
+                </div>
+            </div>
+            <div class="col">
+              <div class="row">
+                <center>
+                    <h1>Pre-Loaded image & drawing on it!</h1>
+                    <canvas style="background-image: url('1.jpg');" width="400" height="400" id="drawing1"></canvas>
+                </center>
+            </div>
+            <div class="row">
+                <center>
+                    <input type="button" id="clear1" value="Clear Image">
+                    <!-- <input type="button" id="download" value="Save"> -->
+                    <a id="download1" download="image.png"><button type="button" onClick="download1()">Download</button></a>
+                    <input type="button" onclick="restore1()" value="Restore">
+                    <!-- <input type="file" id="inp" accept="image/*" value="Load Image"> -->
+                </center>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="other/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="canvasjs1.js"></script>
+<script src="canvasjs.js"></script>
+</body>
+</html>
